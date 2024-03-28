@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+
+group = 'dev.paracausal'
+version = '1.0.0'
+
+
+repositories {
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT'
+    compileOnly files('../TestAPI/build/libs/TestAPI-1.0.0.jar')
+}
